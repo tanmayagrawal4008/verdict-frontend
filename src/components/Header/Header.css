@@ -1,0 +1,33 @@
+.header{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 60px;
+    align-items: flex-start;
+}
+
+.logo__section img{
+    height: 70px;
+    display: block;
+}
+.auth__section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    align-items:flex-end;
+
+    gap:0px;
+}
+.language img{
+    height : 30px;
+}
+.auth__links{
+    font-size: 16px;
+    display: flex;
+
+}
+.auth__links span{
+    margin : 0px 10px;
+}
