@@ -1,0 +1,21 @@
+.contest__card{
+    align-items: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-top: 1px solid gray;
+
+}
+.contest__card h1{
+    font-size: 20px;
+    font-weight: bold;
+     color :#3B5998;
+     margin: 0px;
+
+}
+.conteset__card p{
+    margin: 0px;
+}
+.contest__card a {
+    margin :0px;
+}
+

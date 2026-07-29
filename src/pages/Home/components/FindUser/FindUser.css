@@ -1,0 +1,23 @@
+.find__user{
+
+    border: 1px solid gray;
+    border-radius: 8px;
+}
+
+
+.input{
+    margin: 20px;
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.find{
+    display: flex;
+    justify-content: flex-end;
+}
+button{
+    margin: 20px;
+    width: 100px;
+    height: 30px
+}

@@ -1,4 +1,5 @@
 
+import React from "react";
 import "./Navbar.css"
 import { NavLink } from "react-router-dom";
 
@@ -6,81 +7,85 @@ function Navbar(){
     return (
         <nav className="navbar">
             <div className="nav__links"> 
-                <Navlink 
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
-                <Navlink 
+                </NavLink>
+                <NavLink 
                     to = "/"
-                    className = {({isActive}) => isActive ? "active-link" : ""}
+                    className = {({isActive}) => isActive ? "active__link" : ""}
                 >
                     Home
-                </Navlink>
+                </NavLink>
             </div>
             <div className="nav__search">
-                
+                <input
+                type="text"
+                placeholder="">
+
+                </input>
             </div>
         </nav>
     );

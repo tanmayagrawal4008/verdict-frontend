@@ -1,0 +1,35 @@
+.top__rated{
+    border: 1px solid gray;
+    border-radius: 8px;
+
+}
+
+.card__header{
+    border-bottom: 1px solid gray;
+}
+
+.table{
+    border: 1px solid red;
+    width: 100%;
+    border-collapse: collapse;
+
+}
+
+thead{
+    font-size: 20px;
+    font-weight: bold;
+
+}
+
+tbody{
+    font-size: 16px;
+}
+
+
+th{
+    /* text-align: center; */
+    border: 1px solid red;
+}
+
+
+

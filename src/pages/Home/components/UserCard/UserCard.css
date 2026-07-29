@@ -1,0 +1,71 @@
+*{
+    margin:0px;
+    padding: 0px;
+}
+
+.user__card{
+    border: 2px solid gray;
+
+    border-radius: 8px;   
+}
+.card__header{
+    border-bottom: 1px solid gray;
+    color:#3B5998; 
+    font-weight: bold;
+    font-size: 20px;
+    
+}
+
+.card__content{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/* -------- */
+.left{
+    border: 1px solid black;
+    margin: 10px;
+}
+
+.profile__data{
+    border: 2px solid red;
+    font-size: 15px;
+}
+.profile__data div{
+    display: flex;
+    justify-content: space-around;
+}
+
+.links{
+    display: flex;
+    flex-direction: column;
+    list-style: circle inside none;
+    text-align: left;
+    margin-top: 10px;
+    font-size: 15px;
+    
+}
+.links li{
+    margin: 0px;
+    padding: 0px;
+}
+
+
+
+/* -------- */
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 5px 20px;
+    
+
+    
+}
+
+
+
+
+
+

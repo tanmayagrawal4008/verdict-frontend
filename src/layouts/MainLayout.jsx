@@ -15,7 +15,7 @@ function MainLayout ( ){
 
             <Header></Header>
 
-
+            <Navbar></Navbar>
             
 
             <main className="main-content">
