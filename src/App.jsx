@@ -1,6 +1,8 @@
 import { BrowserRouter, Routes,  Route } from "react-router-dom";
 import MainLayout from "./layouts/MainLayout.jsx"
 import Home from "./pages/Home/Home.jsx";
+import Enter from "./pages/Enter/Enter.jsx"
+import Register from "./pages/Register/Register.jsx"
 import "./App.css";
 
 function App() {
@@ -12,14 +14,13 @@ function App() {
         
         <Route element = {<MainLayout/>}>
           <Route path = "/" element = {<Home/>}/>
-          {/* <Route path = "/problems" element = {<Problems/>}/>
-          <Route path = "/problem/:problemId" element = {<ProblemDetails/>}/>
-          <Route path = "/submissions" element = {<Submissions/>}/>
-          <Route path = "/submission/:submissionId" element = {<SubmissionDetails/>}/> */}
+          <Route path = "/enter" element = {<Enter/>}/>
+          <Route path = "/register" element = {<Register/>}/>
+          
 
         </Route>
-        {/* <Rout path = "/login" element = {<Login/>}/>
-        <Rout path = "/signup" element = {<Signup/>}/> */}
+
+      
 
 
       </Routes>

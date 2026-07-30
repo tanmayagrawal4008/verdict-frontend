@@ -1,0 +1,9 @@
+.blog__downbar{
+    border: 1px solid gray;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-between;
+
+
+}
+
