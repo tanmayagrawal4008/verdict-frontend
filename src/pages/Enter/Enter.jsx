@@ -1,29 +1,3 @@
-import "./Enter.css"
-import { Link } from "react-router-dom";
-
-
-
-function Enter(){
-    return (
-        <div className="enter">
-            <div className="note">
-                <p>Fill in the form to login into Codeforces.
-                    You can use Gmail as an alternative way to enter.
-                </p>                
-            </div>
-            <div className="enter__card">
-                <div className="card__header">Login into Codeforces</div>
-                <div className="email__input"><span>Email : </span><input type="email" /></div>
-                <div className="password__input"><span>Password : </span> <input type="password" /></div>
-                    
-                <button>Login</button>
-                <div className="card__footer">
-                    <Link to = "/gmail">use gmail</Link>
-                </div>
-            </div>
-        </div>
-    );
-
-}
-
+import { Link, useLocation, useNavigate } from "react-router-dom"; import { useState } from "react"; import { useAuth } from "../../context/AuthContext"; import { ErrorMessage } from "../../components/PageState"; import "./Enter.css";
+function Enter(){ const { login, isAuthenticated } = useAuth(); const navigate = useNavigate(); const location = useLocation(); const [form, setForm] = useState({ email: "", password: "" }); const [error, setError] = useState(""); const [saving, setSaving] = useState(false); async function submit(e) { e.preventDefault(); setSaving(true); setError(""); try { await login(form); navigate(location.state?.from || "/problems"); } catch (err) { setError(err.message); } finally { setSaving(false); } } if (isAuthenticated) return <div className="page-state">You are already signed in.</div>; return <section className="form-card page-card"><h1 className="page-title">Enter</h1><p className="auth-intro">Enter your email and password to continue solving and submitting.</p>{error && <ErrorMessage>{error}</ErrorMessage>}<form className="form-grid" onSubmit={submit}><div className="field"><label>Email</label><input required type="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} /></div><div className="field"><label>Password</label><input required type="password" value={form.password} onChange={(e) => setForm({ ...form, password: e.target.value })} /></div><div className="form-actions"><button className="button" disabled={saving}>{saving ? "Entering..." : "Enter"}</button><Link to="/register">Need an account?</Link></div></form></section>; }
 export default Enter;

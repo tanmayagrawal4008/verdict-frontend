@@ -1,9 +1,4 @@
-*{
-  margin: 0px;
-  padding : 0px;
-  box-sizing: border-box;
-}
-
-body{
-  margin: 0px;
-}
+* { box-sizing: border-box; }
+.site-shell { width: min(1180px, calc(100% - 32px)); margin: 0 auto; min-height: 100vh; }
+.main-content { padding: 25px 0 46px; }
+.site-footer { border-top: 1px solid #d9e0e8; color: #7d8996; font-size: 12px; padding: 17px 0 28px; }

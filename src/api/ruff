@@ -1,0 +1,16 @@
+home page api
+    get recent blogs
+    get upcomming contests
+    get top rated
+    get top contributors
+
+
+
+blog = {
+    id,
+    title,
+    author,
+    creationTime,
+    upvotes,
+    downvotes
+}

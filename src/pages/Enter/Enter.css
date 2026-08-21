@@ -1,11 +1,1 @@
-.enter__card{
-    border: 2px solid red;
-    width: 500px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-}
-
-.enter{
-    border: 2px solid blue;
-}
+.auth-intro { color: #6a7d8d; font-size: 14px; line-height: 1.5; margin-bottom: 20px; }

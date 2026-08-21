@@ -1,12 +1,11 @@
-import { Link } from "react-router-dom"
 import "./ProfileNav.css"
 import { NavLink } from "react-router-dom";
 function ProfileNav(){
     return (
         <nav className="profile__nav"> 
-        <NavLink to = "/profile">
-            
-        </NavLink>
+            <NavLink to = "/profile">
+                
+            </NavLink>
             
         </nav>
 
@@ -14,3 +13,4 @@ function ProfileNav(){
 
 }
 export default ProfileNav;
+

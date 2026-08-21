@@ -1,0 +1,1 @@
+.two-fields { display: grid; gap: 12px; grid-template-columns: repeat(3, 1fr); }@media (max-width: 600px) { .two-fields { grid-template-columns: 1fr; } }
