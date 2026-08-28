@@ -12,6 +12,7 @@ import MyProblems from "./pages/MyProblems/MyProblems";
 import MySubmissions from "./pages/MySubmissions/MySubmissions";
 import SubmissionDetail from "./pages/SubmissionDetail/SubmissionDetail";
 import NotFound from "./pages/NotFound/NotFound";
+import Testcases from "./pages/Testcases/Testcases";
 import "./App.css";
 import "./pages/shared.css";
 
@@ -23,6 +24,7 @@ function App() {
     <Route path="/problems" element={<ProblemSet />} />
     <Route path="/problems/:problemId" element={<ProblemDetail />} />
     <Route path="/problems/:problemId/submit" element={<Submit />} />
+    <Route path="/problems/:problemId/testcases" element={<Testcases />} />
     <Route path="/create-problem" element={<CreateProblem />} />
     <Route path="/my-problems" element={<MyProblems />} />
     <Route path="/my-submissions" element={<MySubmissions />} />
