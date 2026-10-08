@@ -1,5 +1,5 @@
 const API_BASE_URL = (
-  import.meta.env.VITE_API_BASE_URL || "http://localhost:3000"
+  import.meta.env.VITE_API_BASE_URL || "http://13.212.32.153:3000/"
 ).replace(/\/$/, "");
 const AUTH_STORAGE_KEY = "cf-clone-auth";
 export const AUTH_UPDATED_EVENT = "cf-clone-auth-updated";
@@ -53,7 +53,10 @@ async function refreshAccessToken() {
     refreshPromise = (async () => {
       const currentAuth = readStoredAuth();
       if (!currentAuth.refresh_token) {
-        throw new ApiError("Your session has expired. Please sign in again.", 401);
+        throw new ApiError(
+          "Your session has expired. Please sign in again.",
+          401,
+        );
       }
 
       const { response, payload } = await send("/auth/refresh", {
@@ -64,9 +67,15 @@ async function refreshAccessToken() {
         if (response.status === 400 || response.status === 401) {
           localStorage.removeItem(AUTH_STORAGE_KEY);
           notifyAuth(AUTH_SESSION_EXPIRED_EVENT);
-          throw new ApiError("Your session has expired. Please sign in again.", 401);
+          throw new ApiError(
+            "Your session has expired. Please sign in again.",
+            401,
+          );
         }
-        throw new ApiError(payload.message || "Could not refresh your session", response.status);
+        throw new ApiError(
+          payload.message || "Could not refresh your session",
+          response.status,
+        );
       }
 
       const nextAuth = { ...currentAuth, ...payload.data };
@@ -83,11 +92,19 @@ async function refreshAccessToken() {
 export async function request(path, { method = "GET", body, token } = {}) {
   const storedAuth = token ? readStoredAuth() : {};
   const accessToken = storedAuth.access_token || token;
-  let { response, payload } = await send(path, { method, body, token: accessToken });
+  let { response, payload } = await send(path, {
+    method,
+    body,
+    token: accessToken,
+  });
 
   if (response.status === 401 && accessToken && path !== "/auth/refresh") {
     const refreshedToken = await refreshAccessToken();
-    ({ response, payload } = await send(path, { method, body, token: refreshedToken }));
+    ({ response, payload } = await send(path, {
+      method,
+      body,
+      token: refreshedToken,
+    }));
   }
 
   if (!response.ok || !payload.success)
